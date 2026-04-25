@@ -2,34 +2,242 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-  <title>我的个人主页</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      max-width: 760px;
-      margin: 80px auto;
-      line-height: 1.8;
-      padding: 0 20px;
-    }
-    h1 { font-size: 36px; }
-    .tag { color: #666; }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>黄撑 | Personal Website</title>
+  <meta name="description" content="黄撑的个人主页，展示个人简介、技术栈、项目经历与联系方式。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700&amp;family=Outfit:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/site.css">
 </head>
 <body>
-  <h1>你好，我是 XXX</h1>
-  <p class="tag">电商运营 / 自动化 / AI 工具实践者</p>
+  <div class="page-shell">
+    <header class="hero">
+      <nav class="topbar">
+        <a class="brand" href="#top">Cheng Huang</a>
+        <div class="nav-links">
+          <a href="#about">关于我</a>
+          <a href="#skills">技能</a>
+          <a href="#projects">项目</a>
+          <a href="#journey">经历</a>
+          <a href="#contact">联系我</a>
+        </div>
+      </nav>
 
-  <h2>关于我</h2>
-  <p>这里写你的个人介绍、擅长领域、项目经历。</p>
+      <div class="hero-grid" id="top">
+        <div class="hero-copy">
+          <p class="eyebrow">Backend Developer · Python / Django</p>
+          <h1>把个人经历、项目积累和表达欲，整理成一个可以长期生长的主页。</h1>
+          <p class="lead">
+            我是黄撑，来自贵州黔西南，主攻 Python 后端开发，也持续做 Web 项目实践。
+            这个页面基于原始个人简介仓库重构为纯静态版本，可直接部署在 GitHub Pages。
+          </p>
+          <div class="cta-row">
+            <a class="button button-primary" href="assets/resume.docx">下载简历</a>
+            <a class="button button-secondary" href="#projects">查看项目</a>
+          </div>
+          <ul class="hero-meta">
+            <li>常用技术：Python / Django / HTML / Linux / Java</li>
+            <li>方向：Web 开发、后端设计、个人产品实践</li>
+            <li>GitHub：<a href="https://github.com/brianxxim">github.com/brianxxim</a></li>
+          </ul>
+        </div>
 
-  <h2>项目</h2>
-  <ul>
-    <li>OpenClaw 自动化实践</li>
-    <li>电商数据分析看板</li>
-    <li>RPA 批量店铺处理流程</li>
-  </ul>
+        <aside class="profile-card">
+          <img class="avatar" src="assets/user.png" alt="黄撑头像">
+          <div class="profile-card-body">
+            <h2>黄撑</h2>
+            <p>嗨，我是一个正在持续迭代中的开发者。</p>
+            <dl class="profile-list">
+              <div>
+                <dt>邮箱</dt>
+                <dd><a href="mailto:chengrip@foxmail.com">chengrip@foxmail.com</a></dd>
+              </div>
+              <div>
+                <dt>电话</dt>
+                <dd><a href="tel:+8617302729867">+86 17302729867</a></dd>
+              </div>
+              <div>
+                <dt>微信</dt>
+                <dd>tb28579437</dd>
+              </div>
+              <div>
+                <dt>地址</dt>
+                <dd>贵州 · 黔西南</dd>
+              </div>
+            </dl>
+          </div>
+        </aside>
+      </div>
+    </header>
 
-  <h2>联系我</h2>
-  <p>Email：your@email.com</p>
+    <main>
+      <section class="section" id="about">
+        <div class="section-heading">
+          <p class="eyebrow">About Me</p>
+          <h2>关于我</h2>
+        </div>
+        <div class="about-grid">
+          <article class="panel">
+            <p>
+              原仓库里的个人站是一个依赖后端模板渲染和服务端配置的项目，这次我把它重构成了 GitHub Pages
+              可直接托管的静态站点，同时保留了原始内容中的个性、技术方向和项目轨迹。
+            </p>
+            <p>
+              我喜欢从真实问题里打磨工程能力，也喜欢给自己的项目做完整闭环：从页面、接口、数据结构到部署，
+              都尽量做成一个能真正跑起来、能长期维护的作品。
+            </p>
+          </article>
+          <article class="panel quote-card">
+            <p class="quote">“Follow your heart, then build the system that supports it.”</p>
+            <p class="quote-note">这句英文灵感来自原站首页文案，我把它改写成更适合现在这个版本的表达。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="skills">
+        <div class="section-heading">
+          <p class="eyebrow">Tech Stack</p>
+          <h2>核心技能</h2>
+        </div>
+        <div class="skill-grid">
+          <article class="skill-card">
+            <span class="skill-score">95%</span>
+            <h3>Python</h3>
+            <p>后端开发主力语言，覆盖脚本编写、业务系统和站点开发。</p>
+          </article>
+          <article class="skill-card">
+            <span class="skill-score">90%</span>
+            <h3>Django</h3>
+            <p>熟悉 Web 开发流程、模板体系、数据建模与后台业务组织。</p>
+          </article>
+          <article class="skill-card">
+            <span class="skill-score">75%</span>
+            <h3>HTML / CSS</h3>
+            <p>能独立完成前端页面重构，并兼顾展示表达与静态部署能力。</p>
+          </article>
+          <article class="skill-card">
+            <span class="skill-score">75%</span>
+            <h3>Linux</h3>
+            <p>熟悉基础部署、环境管理和线上服务常见配置场景。</p>
+          </article>
+          <article class="skill-card">
+            <span class="skill-score">50%</span>
+            <h3>Java</h3>
+            <p>有 Android 项目实践经验，能完成基础功能开发与竞赛实现。</p>
+          </article>
+          <article class="skill-card">
+            <span class="skill-score">∞</span>
+            <h3>持续成长</h3>
+            <p>比起一次性完成，我更在意把项目做成可以反复迭代的长期作品。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="projects">
+        <div class="section-heading">
+          <p class="eyebrow">Selected Work</p>
+          <h2>项目实践</h2>
+        </div>
+        <div class="project-grid">
+          <article class="project-card featured">
+            <p class="project-type">2022.09 · 后端工程师</p>
+            <h3>BrianBlog 博客系统</h3>
+            <p>
+              一个业务较完整的博客产品，支持多用户在线互动、文章发表与点赞。
+              项目中重点实践了 Django 定制、缓存结构设计、搜索与定时任务等能力。
+            </p>
+            <ul class="tag-row">
+              <li>Django</li>
+              <li>Whoosh</li>
+              <li>APScheduler</li>
+              <li>Gunicorn</li>
+              <li>Nginx</li>
+            </ul>
+          </article>
+
+          <article class="project-card">
+            <p class="project-type">2022.12 - 2023.01</p>
+            <h3>Gallery 在线图床</h3>
+            <p>围绕图片上传与展示设计的轻量产品，使用 Pillow 做压缩与缩略图处理，降低带宽开销并优化浏览体验。</p>
+            <ul class="tag-row">
+              <li>Python</li>
+              <li>Pillow</li>
+              <li>Image Processing</li>
+            </ul>
+          </article>
+
+          <article class="project-card">
+            <p class="project-type">2022.07 · 学院期末考核</p>
+            <h3>学生管理系统</h3>
+            <p>较早期的 Django 实践项目，完成了数据库增删改查、状态保持等核心业务流程。</p>
+            <ul class="tag-row">
+              <li>Django</li>
+              <li>CRUD</li>
+              <li>Session</li>
+            </ul>
+          </article>
+
+          <article class="project-card">
+            <p class="project-type">2022.04 · 校园安卓开发大赛</p>
+            <h3>Android 软件开发</h3>
+            <p>完成登录、注册、好友列表和个人中心等模块设计与开发，并在比赛中获得第二名。</p>
+            <ul class="tag-row">
+              <li>Android</li>
+              <li>Java</li>
+              <li>Competition</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="journey">
+        <div class="section-heading">
+          <p class="eyebrow">Journey</p>
+          <h2>成长与经历</h2>
+        </div>
+        <div class="timeline">
+          <article class="timeline-item">
+            <span class="timeline-year">2000 - 2013</span>
+            <h3>从山里长大，也从那里学会观察世界</h3>
+            <p>原始页面里写了很多童年与迁居的经历，我保留了那种很个人化的叙述感，因为它正是这个主页最独特的部分。</p>
+          </article>
+          <article class="timeline-item">
+            <span class="timeline-year">2017 - 2020</span>
+            <h3>价值观逐渐成形</h3>
+            <p>从校园阶段的波动，到开始认真想清楚自己想过怎样的生活，技术也慢慢变成了行动方式。</p>
+          </article>
+          <article class="timeline-item">
+            <span class="timeline-year">2020 - 现在</span>
+            <h3>为梦想持续补课</h3>
+            <p>持续用项目补齐能力短板，把每一次练习都尽量做成真实可运行的产品，而不只是作业。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section contact-section" id="contact">
+        <div class="section-heading">
+          <p class="eyebrow">Contact</p>
+          <h2>联系我</h2>
+        </div>
+        <div class="contact-grid">
+          <article class="panel">
+            <h3>欢迎交流</h3>
+            <p>如果你想聊 Web 开发、个人项目、后端实现，或者只是想打个招呼，都可以通过下面的方式联系我。</p>
+            <ul class="contact-list">
+              <li>邮箱：<a href="mailto:chengrip@foxmail.com">chengrip@foxmail.com</a></li>
+              <li>电话：<a href="tel:+8617302729867">+86 17302729867</a></li>
+              <li>微信：tb28579437</li>
+              <li>GitHub：<a href="https://github.com/brianxxim">brianxxim</a></li>
+            </ul>
+          </article>
+          <article class="panel qr-panel">
+            <h3>微信二维码</h3>
+            <img class="qr-code" src="assets/wx.png" alt="微信二维码">
+          </article>
+        </div>
+      </section>
+    </main>
+  </div>
 </body>
 </html>
